@@ -62,8 +62,9 @@ public class App {
         System.out.println("Second car's name: " + car2.name);
         System.out.println("Third car's name: " + car3.name);
 
-        Car car4 = null;
-        System.out.println(car4.name);
+//        Example for null pointer exception
+//        Car car4 = null;
+//        System.out.println(car4.name);
 
 
     }
