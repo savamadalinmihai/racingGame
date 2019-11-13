@@ -1,14 +1,7 @@
 package org.fasttrackit;
 
-public class Car {
+// Prin comanda extends, preluam toate proprietatile din Vehicle
+public class Car extends Vehicle {
 
-//    instance variables
-    String name;
-    String color;
-    double mileage;
-    double maxSpeed;
-    double fuelLevel;
-    double traveledDistance;
-    boolean running;
     int doorCount;
 }
