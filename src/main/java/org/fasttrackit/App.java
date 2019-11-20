@@ -26,6 +26,15 @@ public class App {
         System.out.println(carReference.engine.manufacturer);
         System.out.println(carReference.engine.capacity);
 
+        double accelerationDistance = carReference.accelerate(90,1.2);
+        System.out.println("Acceleration distance is: " + accelerationDistance);
+
+        Mechanic mechanic = new Mechanic();
+        mechanic.repairVehicle(carReference);
+
+        System.out.println("Total traveled distance after repair: " + carReference.traveledDistance);
+
+
         Car car2 = new Car();
         car2.name = "BMW";
         car2.mileage = 14;
@@ -53,20 +62,20 @@ public class App {
 
         car2.name = "VW";
 
-        System.out.println("  ");
-
-        System.out.println("The new name of the second car is: " + car2.name + ".");
-
-        System.out.println("  ");
+//        System.out.println("  ");
+//
+//        System.out.println("The new name of the second car is: " + car2.name + ".");
+//
+//        System.out.println("  ");
 
 /**    Aici, car 3 devine o telecomanda pentru car 2 si reuseste sa modifice comportamentul pentru car 2,
 *      chiar daca el se afla mai sus decat vine modificarea.
  */
-        Car car3 = car2;
-        car3.name = "Audi";
-
-        System.out.println("Second car's name: " + car2.name);
-        System.out.println("Third car's name: " + car3.name);
+//        Car car3 = car2;
+//        car3.name = "Audi";
+//
+//        System.out.println("Second car's name: " + car2.name);
+//        System.out.println("Third car's name: " + car3.name);
 
 //        Example for null pointer exception
 //        Car car4 = null;
