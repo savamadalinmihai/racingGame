@@ -14,7 +14,7 @@ public class Vehicle {
     public double accelerate(double speed, double durationInHours){
         System.out.println(name + " is accelerating with " + speed + "kph " + " for " + durationInHours+ "h ");
 
-
+//      variabila locala declarata inauntrul unei metode
         double distance = speed * durationInHours;
 
         traveledDistance = traveledDistance + distance;

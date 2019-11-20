@@ -7,6 +7,7 @@ public class App {
     public static void main(String[] args) {
         System.out.println("Welcome to the race!");
 
+//        carReference e modul in care pot accesa informatiile despre masina. E telecomanda
         Car carReference = new Car();
         carReference.name = "Dacia";
         carReference.color = "red";
