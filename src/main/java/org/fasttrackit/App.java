@@ -5,10 +5,16 @@ public class App {
 //    cu cmd+slash pui comentariu pe o linie
 
     public static void main(String[] args) {
+
         System.out.println("Welcome to the race!");
 
 //        carReference e modul in care pot accesa informatiile despre masina. E telecomanda
-        Car carReference = new Car();
+
+        Engine carEngine = new Engine();
+        carEngine.manufacturer = "Renault";
+        carEngine.capacity = 1.5;
+
+        Car carReference = new Car(carEngine);
         carReference.name = "Dacia";
         carReference.color = "red";
         carReference.mileage = 9.8;
@@ -17,11 +23,7 @@ public class App {
         carReference.doorCount = 5;
         carReference.running = false;
 
-        Engine carEngine = new Engine();
-        carEngine.manufacturer = "Renault";
-        carEngine.capacity = 1.5;
 
-        carReference.engine = carEngine;
 
         System.out.println("Engine details...");
         System.out.println(carReference.engine.manufacturer);
@@ -36,7 +38,11 @@ public class App {
         System.out.println("Total traveled distance after repair: " + carReference.traveledDistance);
 
 
-        Car car2 = new Car();
+        Engine car2Engine = new Engine();
+        car2Engine.manufacturer = "Bayerische Motoren Werks";
+        car2Engine.capacity = 2;
+
+        Car car2 = new Car(car2Engine);
         car2.name = "BMW";
         car2.mileage = 14;
         car2.color = null;
