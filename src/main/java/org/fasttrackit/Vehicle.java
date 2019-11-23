@@ -2,11 +2,13 @@ package org.fasttrackit;
 
 public class Vehicle {
 
-//    class variable (proprietate de clasa)
+    //  Class variable (proprietate de clasa), care este valabila pentru toata clasa.
+    //  Cu aceasta urmarim toate masinile pe care le creem.
+
     static int totalCount;
 
+    //    Instance variables. Acestea sunt valabile doar pentru obiectul Vehicle.
 
-    //    instance variables
     String name;
     String color;
     double mileage;
@@ -22,12 +24,14 @@ public class Vehicle {
     public double accelerate(double speed, double durationInHours){
         System.out.println(name + " is accelerating with " + speed + "kph " + " for " + durationInHours+ "h ");
 
-//      variabila locala declarata inauntrul unei metode
+    //      Variabila locala declarata inauntrul unei metode.
+
         double distance = speed * durationInHours;
 
         traveledDistance = traveledDistance + distance;
-//        ce am scris mai sus, prescurtat e ce am scris mai jos.
-//        traveledDistance += distance;
+
+    //      Ce am scris mai sus, prescurtat e ce am scris mai jos.
+    //  traveledDistance += distance;
 
         double usedFuel = mileage * distance / 100;
 
