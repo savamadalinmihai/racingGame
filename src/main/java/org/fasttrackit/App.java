@@ -18,13 +18,13 @@ public class App {
         carEngine.capacity = 1.5;
 
         Car carReference = new Car(carEngine);
-        carReference.name = "Dacia";
-        carReference.color = "red";
-        carReference.mileage = 9.8;
-        carReference.fuelLevel = 60;
-        carReference.maxSpeed = 200;
+        carReference.setName("Dacia");
+        carReference.setColor("Ferrari Red");
+        carReference.setMileage(9.8);
+        carReference.setFuelLevel(60);
+        carReference.setMaxSpeed(200);
         carReference.doorCount = 5;
-        carReference.running = false;
+        carReference.setRunning(false);
 
 
 
@@ -37,7 +37,7 @@ public class App {
 
         Mechanic mechanic = new Mechanic();
         mechanic.repairVehicle(carReference);
-        System.out.println("Total traveled distance after repair: " + carReference.traveledDistance);
+        System.out.println("Total traveled distance after repair: " + carReference.getTraveledDistance());
 
 
         Engine car2Engine = new Engine();
@@ -46,9 +46,9 @@ public class App {
 
 
         Car car2 = new Car(car2Engine);
-        car2.name = "BMW";
-        car2.mileage = 14;
-        car2.color = null;
+        car2.setName("BMW");
+        car2.setMileage(14);
+        car2.setColor(null);
 
 /**        Concatenarea e lipirea a doua chestii cu +
 
@@ -72,7 +72,7 @@ public class App {
         System.out.println("And its running state is: " + car2.running);
 */
 
-        car2.name = "VW";
+        car2.setName("VW");
 
 /**        System.out.println("  ");
 
@@ -85,7 +85,7 @@ public class App {
 *      chiar daca el se afla mai sus decat vine modificarea.
  */
         Car car3 = car2;
-        car3.name = "Audi";
+        car3.setName("Audi");
 
 /**        System.out.println("Second car's name: " + car2.name);
         System.out.println("Third car's name: " + car3.name);
