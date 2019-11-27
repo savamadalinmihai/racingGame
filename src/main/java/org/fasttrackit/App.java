@@ -2,8 +2,6 @@ package org.fasttrackit;
 
 public class App {
 
-//    Cu cmd+slash pui comentariu pe o linie.
-
     public static void main(String[] args) {
 
         Game firstGame = new Game();
@@ -16,8 +14,8 @@ public class App {
 //    carReference e modul in care pot accesa informatiile despre masina. E telecomanda.
 
         Engine carEngine = new Engine();
-        carEngine.manufacturer = "Renault";
-        carEngine.capacity = 1.5;
+        carEngine.setManufacturer("Renault");
+        carEngine.setCapacity(1.5);
 
         Car carReference = new Car(carEngine);
         carReference.setName("Dacia");
@@ -25,14 +23,13 @@ public class App {
         carReference.setMileage(9.8);
         carReference.setFuelLevel(60);
         carReference.setMaxSpeed(200);
-        carReference.doorCount = 5;
+        carReference.setDoorCount(5);
         carReference.setRunning(false);
 
 
-
         System.out.println("Engine details...");
-        System.out.println(carReference.engine.manufacturer);
-        System.out.println(carReference.engine.capacity);
+        System.out.println(carReference.engine.getManufacturer());
+        System.out.println(carReference.engine.getCapacity());
 
         double accelerationDistance = carReference.accelerate(200,1.2);
         System.out.println("Acceleration distance is: " + accelerationDistance);
@@ -43,8 +40,8 @@ public class App {
 
 
         Engine car2Engine = new Engine();
-        car2Engine.manufacturer = "Bayerische Motoren Werks";
-        car2Engine.capacity = 2;
+        car2Engine.setManufacturer("Bayerische Motoren Werks");
+        car2Engine.setCapacity(2);
 
 
         Car car2 = new Car(car2Engine);
@@ -74,7 +71,7 @@ public class App {
         System.out.println("And its running state is: " + car2.running);
 */
 
-        car2.setName("VW");
+//        car2.setName("VW");
 
 /**        System.out.println("  ");
 
@@ -86,8 +83,8 @@ public class App {
 /**    Aici, car 3 devine o telecomanda pentru car 2 si reuseste sa modifice comportamentul pentru car 2,
 *      chiar daca el se afla mai sus decat vine modificarea.
  */
-        Car car3 = car2;
-        car3.setName("Audi");
+//        Car car3 = car2;
+//        car3.setName("Audi");
 
 /**        System.out.println("Second car's name: " + car2.name);
         System.out.println("Third car's name: " + car3.name);
@@ -102,7 +99,7 @@ public class App {
         System.out.println(4 % 2 == 0);
  */
 
-        System.out.println("Studiyng class variables (static variables)...");
+//        System.out.println("Studying class variables (static variables)...");
         Vehicle vehicle1 = new Vehicle();
         Vehicle vehicle2 = new Vehicle();
 
