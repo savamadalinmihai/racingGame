@@ -9,6 +9,8 @@ public class App {
         Game firstGame = new Game();
         firstGame.start();
 
+        Car carWithDefaultEngine = new Car();
+
         System.out.println("Welcome to the race!");
 
 //    carReference e modul in care pot accesa informatiile despre masina. E telecomanda.
