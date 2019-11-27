@@ -29,7 +29,7 @@ public class App {
         System.out.println(carReference.engine.manufacturer);
         System.out.println(carReference.engine.capacity);
 
-        double accelerationDistance = carReference.accelerate(132,1.2);
+        double accelerationDistance = carReference.accelerate(200,1.2);
         System.out.println("Acceleration distance is: " + accelerationDistance);
 
         Mechanic mechanic = new Mechanic();
