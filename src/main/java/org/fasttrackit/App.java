@@ -4,8 +4,18 @@ public class App {
 
     public static void main(String[] args) {
 
-        Game firstGame = new Game();
-        firstGame.start();
+//        Game firstGame = new Game();
+//        firstGame.start();
+
+        String a = "test";
+        String b = "test";
+        String c = new String ("test");
+
+//      compararea a 2 tipuri de date primitive se face mereu cu ==
+//        compararea cu unobiect se face cu .equals
+        System.out.println(a==b);
+        System.out.println(a==c);
+        System.out.println(a.equals(c));
 
 ////        method implementation taken from object's class,
 ////        not from the variable's class
