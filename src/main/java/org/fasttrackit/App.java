@@ -7,6 +7,13 @@ public class App {
         Game firstGame = new Game();
         firstGame.start();
 
+        JokerVehicle jokerVehicle = new JokerVehicle();
+        jokerVehicle.setName("Joker");
+        jokerVehicle.setFuelLevel(80);
+        jokerVehicle.accelerate(440, 1);
+
+        System.out.println("Joker's total distance is " + jokerVehicle.getTraveledDistance());
+
         Car carWithDefaultEngine = new Car();
 
         System.out.println("Welcome to the race!");
@@ -60,8 +67,9 @@ public class App {
         System.out.println("Its door count is: " + carReference.doorCount);
         System.out.println("Its running state is: " + carReference.running);
 
-        System.out.println(" ");
-
+ */
+        System.out.println(car2);
+ /**
         System.out.println("Second car's name is: " + car2.name);
         System.out.println("The color is: " + car2.color);
         System.out.println("Its mileage is: " + car2.mileage);
