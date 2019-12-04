@@ -106,9 +106,7 @@ public class Vehicle {
         this.mileage = mileage;
     }
 
-    public double getMaxSpeed() {
-        return maxSpeed;
-    }
+    public double getMaxSpeed() { return maxSpeed; }
 
     public void setMaxSpeed(double maxSpeed) {
         this.maxSpeed = maxSpeed;
