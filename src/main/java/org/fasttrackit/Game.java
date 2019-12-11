@@ -11,6 +11,9 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Game {
     private Track[]tracks = new Track[3];
     private List<Vehicle> competitors = new ArrayList<>();
+    private boolean winnerNotKnown = true;
+    private int competitorsWithoutFuel = 0;
+
 
     public void start() throws Exception {
         System.out.println("Starting game.");
@@ -22,7 +25,20 @@ public class Game {
 
         initializeCompetitors();
 
-//       enhanced for
+//        do {
+//        System.out.println("Test");
+//      }while (true);
+
+        while (winnerNotKnown && competitorsWithoutFuel < competitors.size()){
+            System.out.println();
+            System.out.println("New Round!");
+            playOneRound(selectedTrack);
+        }
+
+    }
+
+    private void playOneRound(Track selectedTrack) {
+        //       enhanced for
         for (Vehicle vehicle : competitors){
             System.out.println("It's " + vehicle.getName() + "'s turn");
             double speed = getAccelerationSpeedFromUser();
@@ -31,10 +47,13 @@ public class Game {
 
             if (vehicle.getTraveledDistance() >= selectedTrack.getLength()){
                 System.out.println("The winner is: " + vehicle.getName() + "!");
+                winnerNotKnown = false;
                 break;
             }
+            if (vehicle.getFuelLevel()<=0){
+                competitorsWithoutFuel ++;
+            }
         }
-
     }
 
     private double getAccelerationSpeedFromUser(){
@@ -45,6 +64,7 @@ public class Game {
         } catch (InputMismatchException e) {
             System.out.println("You entered an invalid value.");
             //Recursion. When a method calls on itself
+            //This is useful when you want to restart a method after conditions not met.
             return getAccelerationSpeedFromUser();
         }
     }
