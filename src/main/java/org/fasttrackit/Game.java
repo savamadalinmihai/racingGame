@@ -2,10 +2,14 @@ package org.fasttrackit;
 
 import com.sun.codemodel.internal.JArray;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
     private Track[]tracks = new Track[3];
+    private List<Vehicle> competitors = new ArrayList<>();
 
     public void start(){
         System.out.println("Starting game.");
@@ -13,14 +17,33 @@ public class Game {
         initializeTracks();
         displayTracks();
 
-        String vehicleName = getVehicleNameFromUser();
+       initializeCompetitors();
 
-        System.out.println("The name you chose is " + vehicleName);
+//       enhanced for
+        for (Vehicle vehicle : competitors){
+            System.out.println("It's " + vehicle.getName() + "'s turn");
+        }
 
+    }
+
+    private void initializeCompetitors(){
         int numberOfPlayers = getUsersNumber();
-
         System.out.println("The number of players will be " + numberOfPlayers);
 
+        for (int i = 1; i <= numberOfPlayers; i++) {
+            System.out.println("Adding player " + i);
+
+            Vehicle vehicle = new Vehicle();
+            vehicle.setName(getVehicleNameFromUser());
+            vehicle.setFuelLevel(80);
+            vehicle.setMileage(ThreadLocalRandom.current().nextDouble(6, 15));
+            vehicle.setMaxSpeed(300);
+
+            System.out.println("Vehicle for player " + i + ": " + vehicle.getName() +
+                    " - Mileage: " + vehicle.getMileage());
+
+            competitors.add(vehicle);
+        }
     }
 
     private void initializeTracks(){
