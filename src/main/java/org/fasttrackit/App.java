@@ -2,7 +2,7 @@ package org.fasttrackit;
 
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Game firstGame = new Game();
         firstGame.start();
