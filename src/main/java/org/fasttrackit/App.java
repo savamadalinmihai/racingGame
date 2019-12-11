@@ -4,8 +4,8 @@ public class App {
 
     public static void main(String[] args) {
 
-//        Game firstGame = new Game();
-//        firstGame.start();
+        Game firstGame = new Game();
+        firstGame.start();
 
         String a = "test";
         String b = "test";
