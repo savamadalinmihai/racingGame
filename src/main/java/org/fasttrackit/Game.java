@@ -58,6 +58,8 @@ public class Game {
             throw new RuntimeException("You have entered an invalid value!");
         }catch(ArrayIndexOutOfBoundsException exception){
             throw new Exception("You have selected a non existing track!");
+        } finally {
+            System.out.println("Always executed"); //What's inside finally is always executed.
         }
 
 
